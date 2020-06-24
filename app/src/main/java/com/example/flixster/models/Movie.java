@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Movie {
+    public static final String BASE_IMG_URL = "https://image.tmdb.org/t/p/w342/";
     String poster_path;
     String backdrop_path;
     String title;
@@ -37,4 +38,22 @@ public class Movie {
 
         return movies;
     }
+
+    public String getPoster_path() {
+        String path = BASE_IMG_URL + poster_path;
+        return path;
+    }
+
+    public String getBackdrop_path() {
+        return backdrop_path;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
 }
