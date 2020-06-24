@@ -1,5 +1,7 @@
 package com.example.flixster.models;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,7 +47,8 @@ public class Movie {
     }
 
     public String getBackdrop_path() {
-        return backdrop_path;
+        String path = BASE_IMG_URL + backdrop_path;
+        return path;
     }
 
     public String getTitle() {
