@@ -6,15 +6,26 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import org.parceler.Parcel;
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel // so we can later pass the entire Movie object to another activity
 public class Movie {
     public static final String BASE_IMG_URL = "https://image.tmdb.org/t/p/w342/";
     String poster_path;
     String backdrop_path;
     String title;
     String overview;
+
+    public Double getVote_average() {
+        return vote_average;
+    }
+
+    Double vote_average;
+
+    // no-arg, empty constructor required for Parceler
+    public Movie() {};
 
     // initialize a movie with needed properties like poster, backdrop, title, overview
     // get these properties from json object passed in
@@ -23,6 +34,7 @@ public class Movie {
         this.backdrop_path = json.getString("backdrop_path");
         this.title = json.getString("title");
         this.overview = json.getString("overview");
+        this.vote_average = json.getDouble("vote_average");
     }
 
     // create a list of movie objects by parsing the JSONArray of movies

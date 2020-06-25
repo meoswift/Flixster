@@ -1,7 +1,10 @@
 package com.example.flixster.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.flixster.MovieDetailsActivity;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -55,7 +61,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             poster_url = movie.getBackdrop_path();
         }
 
-        Glide.with(context).load(poster_url).into(holder.poster);
+        Glide.with(context).load(poster_url)
+                .placeholder(R.drawable.flicks_backdrop_placeholder)
+                .into(holder.poster);
 
     }
 
@@ -66,7 +74,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
     // Provide a direct reference to each of the views within a data item
     // Used to cache the views within the item layout for fast access
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView title;
         TextView overview;
         ImageView poster;
@@ -79,6 +87,28 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             title = itemView.findViewById(R.id.title);
             overview = itemView.findViewById(R.id.overview);
             poster = itemView.findViewById(R.id.poster);
+
+            itemView.setOnClickListener(this);
+        }
+
+
+        @Override
+        public void onClick(View v) {
+            // get position of item that was clicked
+            int position = getAdapterPosition();
+
+            // make sure position is valid
+            if (position != RecyclerView.NO_POSITION) {
+                // get object in movie list that will be pass into new activity
+                Movie movie = movies_list.get(position);
+                // create new intent to new activity
+                Intent intent = new Intent(context, MovieDetailsActivity.class);
+                // pass movie object as data to new activity
+                intent.putExtra("movie", Parcels.wrap(movie));
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                // start activity
+                context.startActivity(intent);
+            }
         }
     }
 }
