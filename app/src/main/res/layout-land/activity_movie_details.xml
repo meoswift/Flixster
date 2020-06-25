@@ -12,15 +12,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:background="#00000000"
         android:shadowColor="#00FFFFFF"
         android:text="Movie title"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trailer_player" />
+        app:layout_constraintStart_toEndOf="@+id/trailer_player"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
         android:id="@+id/rb_vote_avg"
@@ -30,7 +30,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:progressBackgroundTint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trailer_player"
         app:layout_constraintTop_toBottomOf="@+id/release" />
 
     <TextView
@@ -44,8 +44,8 @@
         android:text="Synopsis"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/trailer_player"
         app:layout_constraintTop_toBottomOf="@+id/overview_label" />
 
     <TextView
@@ -56,7 +56,7 @@
         android:layout_marginTop="8dp"
         android:text="Release date"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trailer_player"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <TextView
@@ -69,18 +69,18 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trailer_player"
         app:layout_constraintTop_toBottomOf="@+id/rb_vote_avg" />
 
     <ImageView
         android:id="@+id/trailer_player"
         android:layout_width="400dp"
         android:layout_height="225dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
         android:adjustViewBounds="true"
         android:onClick="onShowTrailer"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/flicks_backdrop_placeholder" />

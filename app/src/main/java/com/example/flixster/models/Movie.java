@@ -21,6 +21,7 @@ public class Movie {
     String overview;
     String release_date;
     Double vote_average;
+    int movie_id;
 
     // no-arg, empty constructor required for Parceler
     public Movie() {};
@@ -34,6 +35,7 @@ public class Movie {
         this.overview = json.getString("overview");
         this.vote_average = json.getDouble("vote_average");
         this.release_date = json.getString("release_date");
+        this.movie_id = json.getInt("id");
     }
 
     // create a list of movie objects by parsing the JSONArray of movies
@@ -73,5 +75,9 @@ public class Movie {
 
     public String getRelease_date() {
         return release_date;
+    }
+
+    public int getMovie_id() {
+        return movie_id;
     }
 }
