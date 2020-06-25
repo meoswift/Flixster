@@ -23,6 +23,8 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 // Create the basic adapter extending from RecyclerView.Adapter
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder> {
 
@@ -50,10 +52,17 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = movies_list.get(position);
-        String poster_url;
 
+        // set all properties of a movie item
         holder.title.setText(movie.getTitle());
         holder.overview.setText(movie.getOverview());
+        setPoster(movie, holder);
+    }
+
+    // Function to get the poster URL and use Glide to display on screen
+    // Use Glide transformations to create rounded corner
+    private void setPoster(Movie movie, ViewHolder holder) {
+        String poster_url;
 
         if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             poster_url = movie.getPoster_path();
@@ -61,10 +70,13 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             poster_url = movie.getBackdrop_path();
         }
 
+        int radius = 20; // corner radius, higher value = more rounded
+        int margin = 10; // crop margin, set to 0 for corners with no crop
+
         Glide.with(context).load(poster_url)
                 .placeholder(R.drawable.flicks_backdrop_placeholder)
+                .transform(new RoundedCornersTransformation(radius, margin))
                 .into(holder.poster);
-
     }
 
     @Override
