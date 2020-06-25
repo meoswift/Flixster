@@ -12,7 +12,9 @@ import java.util.List;
 
 @Parcel // so we can later pass the entire Movie object to another activity
 public class Movie {
+    // TODO: Fetch image size from Config endpoint instead of hardcoding
     public static final String BASE_IMG_URL = "https://image.tmdb.org/t/p/w342/";
+
     String poster_path;
     String backdrop_path;
     String title;
@@ -42,7 +44,6 @@ public class Movie {
             // create one movie object with properties
             JSONObject movie_obj = jsonMovies.getJSONObject(i);
             Movie movie = new Movie(movie_obj);
-
             // add movie to movies list
             movies.add(movie);
         }
@@ -51,13 +52,11 @@ public class Movie {
     }
 
     public String getPoster_path() {
-        String path = BASE_IMG_URL + poster_path;
-        return path;
+        return String.format("%s%s", BASE_IMG_URL, poster_path);
     }
 
     public String getBackdrop_path() {
-        String path = BASE_IMG_URL + backdrop_path;
-        return path;
+        return String.format("%s%s", BASE_IMG_URL, backdrop_path);
     }
 
     public String getTitle() {

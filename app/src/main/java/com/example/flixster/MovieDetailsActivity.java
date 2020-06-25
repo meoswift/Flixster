@@ -41,5 +41,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         synopsis.setText(movie.getOverview());
         rb_vote.setRating(average);
         release_date.setText(String.format("Release date: %s", movie.getRelease_date()));
+
+        //TODO: Get trailer of movie from another endpoint and show in details
     }
 }

@@ -63,15 +63,15 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
     // Use Glide transformations to create rounded corner
     private void setPoster(Movie movie, ViewHolder holder) {
         String poster_url;
+        int radius = 20; // corner radius, higher value = more rounded
+        int margin = 10; // crop margin, set to 0 for corners with no crop
 
+        // get different poster based on phone orientation
         if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             poster_url = movie.getPoster_path();
         } else {
             poster_url = movie.getBackdrop_path();
         }
-
-        int radius = 20; // corner radius, higher value = more rounded
-        int margin = 10; // crop margin, set to 0 for corners with no crop
 
         Glide.with(context).load(poster_url)
                 .placeholder(R.drawable.flicks_backdrop_placeholder)
