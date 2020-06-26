@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-(Portrait)
+(Portrait vs. Landscape)
 
 <img src='https://i.imgur.com/LyEkBma.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />  <img src='https://i.imgur.com/kw0mIKp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> 
 
