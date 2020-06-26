@@ -18,6 +18,8 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 import org.parceler.Parcels;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class MovieDetailsActivity extends YouTubeBaseActivity {
 
     public static final String VIDEO_ID_TAG = "videoId";
@@ -50,7 +52,9 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         binding.voteCount.setText(movie.getVoteCount());
         binding.synopsis.setText(movie.getOverview());
 
-        Glide.with(this).load(movie.getPoster_path()).into(binding.poster);
+        Glide.with(this)
+                .load(movie.getPoster_path())
+                .into(binding.poster);
 
         // load the youtube video to view
         String youtube_key = getString(R.string.youtube_api_key); // private key
