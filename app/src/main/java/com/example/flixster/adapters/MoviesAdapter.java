@@ -141,7 +141,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
                         // start a new intent
                         Intent intent = new Intent(context, MovieDetailsActivity.class);
                         // pass video id to next activity to play the correct trailer
-                        intent.putExtra("video_id", id);
+                        intent.putExtra("videoId", id);
                         // pass movie object as data to new activity
                         intent.putExtra("movie", Parcels.wrap(movie));
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
