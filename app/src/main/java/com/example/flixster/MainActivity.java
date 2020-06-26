@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public static String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=";
     public static final String TAG = "MainActivity";
 
-    List<Movie> movie_list;
+    List<Movie> movieList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
         String movie_key = getString(R.string.movie_api_key);
 
         // initialize an empty movie list
-        movie_list = new ArrayList<>();
+        movieList = new ArrayList<>();
 
         // Lookup the recyclerview in activity layout
         RecyclerView moviesRV = findViewById(R.id.movies_rv);
 
         // Create a movie adapter to bind model into view
-        final MoviesAdapter adapter = new MoviesAdapter(getApplicationContext(), movie_list);
+        final MoviesAdapter adapter = new MoviesAdapter(getApplicationContext(), movieList);
         // Set adapter to populate the RecyclerView
         moviesRV.setAdapter(adapter);
         // set RecyclerView to Linear so user can scroll
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     // retrieve results array from now_playing json object
                     JSONArray results = json.getJSONArray("results");
                     // parse json array into a movie list of type List<Movie>
-                    movie_list.addAll(Movie.jsonToList(results));
+                    movieList.addAll(Movie.jsonToList(results));
                     adapter.notifyDataSetChanged();
                 } catch (JSONException e) {
                     Log.e(TAG, "Error getting results array.");

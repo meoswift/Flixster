@@ -34,7 +34,9 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
     TextView synopsis;
     RatingBar rb_vote;
     TextView release_date;
-    YouTubePlayerView  player;
+    YouTubePlayerView player;
+    ImageView poster;
+    TextView rating;
 
     Movie movie;
     float average;
@@ -53,6 +55,8 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         rb_vote = findViewById(R.id.rb_vote_avg);
         release_date = findViewById(R.id.release);
         player = findViewById(R.id.trailer_player);
+        poster = findViewById(R.id.poster_small);
+        rating = findViewById(R.id.rating);
 
         // get movie object that was passed from clicking on a item in list
         Intent intent = getIntent();
@@ -68,7 +72,9 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         tv_title.setText(movie.getTitle());
         synopsis.setText(movie.getOverview());
         rb_vote.setRating(average);
+        rating.setText(String.valueOf(movie.getVote_average()));
         release_date.setText(String.format("Release date: %s", movie.getRelease_date()));
+        Glide.with(this).load(movie.getPoster_path()).into(poster);
         playTrailerVideo(youtube_key);
     }
 
