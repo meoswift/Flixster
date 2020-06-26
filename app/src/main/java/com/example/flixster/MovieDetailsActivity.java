@@ -30,18 +30,18 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
 
     public static final String VIDEO_ID_TAG = "video_id";
 
-    TextView tv_title;
+    TextView title;
     TextView synopsis;
-    RatingBar rb_vote;
-    TextView release_date;
+    RatingBar vote;
+    TextView releaseDate;
     YouTubePlayerView player;
     ImageView poster;
     TextView rating;
 
     Movie movie;
     float average;
-    int movie_id;
-    String video_id;
+    int movieId;
+    String videoId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +50,10 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
 
         String youtube_key = getString(R.string.youtube_api_key); // private key
 
-        tv_title = findViewById(R.id.tv_title);
+        title = findViewById(R.id.tv_title);
         synopsis = findViewById(R.id.synopsis);
-        rb_vote = findViewById(R.id.rb_vote_avg);
-        release_date = findViewById(R.id.release);
+        vote = findViewById(R.id.rb_vote_avg);
+        rating = findViewById(R.id.release);
         player = findViewById(R.id.trailer_player);
         poster = findViewById(R.id.poster_small);
         rating = findViewById(R.id.rating);
@@ -62,18 +62,18 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         Intent intent = getIntent();
         movie = Parcels.unwrap(intent.getParcelableExtra("movie"));
         assert movie != null;  // make sure object passed is valid
-        video_id = intent.getStringExtra(VIDEO_ID_TAG);
+        videoId = intent.getStringExtra(VIDEO_ID_TAG);
 
         // calculate the vote average from max 10 to max 5
         average = movie.getVote_average().floatValue() / 2.0f;
-        movie_id = movie.getMovie_id();
+        movieId = movie.getMovie_id();
 
         // set all properties of MovieDetails
-        tv_title.setText(movie.getTitle());
+        title.setText(movie.getTitle());
         synopsis.setText(movie.getOverview());
-        rb_vote.setRating(average);
+        vote.setRating(average);
         rating.setText(String.valueOf(movie.getVote_average()));
-        release_date.setText(String.format("Release date: %s", movie.getRelease_date()));
+        releaseDate.setText(String.format("Release date: %s", movie.getRelease_date()));
         Glide.with(this).load(movie.getPoster_path()).into(poster);
         playTrailerVideo(youtube_key);
     }
@@ -84,7 +84,7 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                 YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.cueVideo(video_id);
+                youTubePlayer.cueVideo(videoId);
             }
 
             @Override
