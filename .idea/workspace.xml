@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="006cd520-34df-4a31-8ffe-e4367f1f27a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_databinding_viewbinding_4_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,18 +22,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/adapters/MoviesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/adapters/MoviesAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_movie_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_movie_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/models/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +76,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="RF8N316WPGN" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-26T18:26:55.852Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-26T20:59:27.222Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs" />
@@ -185,10 +178,10 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="360" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593112690060" />
-    <state x="709" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1593121763945">
+    <state x="709" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1593204003698">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state x="709" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1593121763945" />
+    <state x="709" y="254" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1593204003698" />
     <state x="634" y="285" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593191102271">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
@@ -209,22 +202,22 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="574" y="294" key="Downloadable.Font.Dialog.Size/0.23.1792.1017@0.23.1792.1017" timestamp="1593195920795" />
-    <state width="1750" height="275" key="GridCell.Tab.0.bottom" timestamp="1593200883353">
+    <state width="1750" height="275" key="GridCell.Tab.0.bottom" timestamp="1593205007557">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593200883353" />
-    <state width="1750" height="275" key="GridCell.Tab.0.center" timestamp="1593200883353">
+    <state width="1750" height="275" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007557" />
+    <state width="1750" height="275" key="GridCell.Tab.0.center" timestamp="1593205007556">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593200883353" />
-    <state width="1750" height="275" key="GridCell.Tab.0.left" timestamp="1593200883353">
+    <state width="1750" height="275" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007556" />
+    <state width="1750" height="275" key="GridCell.Tab.0.left" timestamp="1593205007555">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593200883353" />
-    <state width="1750" height="275" key="GridCell.Tab.0.right" timestamp="1593200883353">
+    <state width="1750" height="275" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007555" />
+    <state width="1750" height="275" key="GridCell.Tab.0.right" timestamp="1593205007556">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593200883353" />
+    <state width="1750" height="275" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007556" />
     <state x="397" y="170" key="SettingsEditor" timestamp="1593022818672">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>

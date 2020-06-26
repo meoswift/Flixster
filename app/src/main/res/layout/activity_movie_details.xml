@@ -30,7 +30,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:progressBackgroundTint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/overview_label"
         app:layout_constraintStart_toEndOf="@+id/poster"
         app:layout_constraintTop_toBottomOf="@+id/release" />
 
@@ -57,8 +56,8 @@
         android:layout_marginTop="8dp"
         android:text="Release date"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintStart_toEndOf="@+id/poster"
+        app:layout_constraintTop_toBottomOf="@+id/original_title" />
 
     <TextView
         android:id="@+id/overview_label"
@@ -68,7 +67,7 @@
         android:layout_marginTop="8dp"
         android:text="Description"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poster" />
@@ -89,7 +88,7 @@
         android:layout_width="114dp"
         android:layout_height="171dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/flicks_movie_placeholder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -109,5 +108,28 @@
         app:layout_constraintStart_toEndOf="@+id/rating_bar"
         app:layout_constraintTop_toTopOf="@+id/rating_bar"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/original_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Original title"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poster"
+        app:layout_constraintTop_toTopOf="@+id/poster" />
+
+    <TextView
+        android:id="@+id/vote_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Vote count"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/poster"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

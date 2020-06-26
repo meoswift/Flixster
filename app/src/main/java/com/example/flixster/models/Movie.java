@@ -17,10 +17,12 @@ public class Movie {
     String posterPath;
     String backdropPath;
     String title;
+    String originalTitle;
     String overview;
     String releaseDate;
     Double voteAverage;
-    int    movieId;
+    int voteCount;
+    int movieId;
 
     // no-arg, empty constructor required for Parceler
     public Movie() {};
@@ -31,8 +33,10 @@ public class Movie {
         this.posterPath = json.getString("poster_path");
         this.backdropPath = json.getString("backdrop_path");
         this.title = json.getString("title");
+        this.originalTitle = json.getString("original_title");
         this.overview = json.getString("overview");
         this.voteAverage = json.getDouble("vote_average");
+        this.voteCount = json.getInt("vote_count");
         this.releaseDate = json.getString("release_date");
         this.movieId = json.getInt("id");
     }
@@ -64,16 +68,24 @@ public class Movie {
         return title;
     }
 
+    public String getOriginalTitle() {
+        return String.format("Original title: %s", originalTitle);
+    }
+
     public String getOverview() {
         return overview;
     }
 
-    public Double getVote_average() {
-        return voteAverage;
+    public String getVoteCount() {
+        return String.format("Vote count: %s", voteCount);
+    }
+
+    public String getVote_average() {
+        return String.valueOf(voteAverage);
     }
 
     public String getRelease_date() {
-        return releaseDate;
+        return String.format("Release date: %s",releaseDate);
     }
 
     public int getMovie_id() {

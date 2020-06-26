@@ -39,15 +39,17 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
         videoId = intent.getStringExtra(VIDEO_ID_TAG);
 
         // calculate the vote average from max 10 to max 5
-        float average = movie.getVote_average().floatValue() / 2.0f;
-        int movieId = movie.getMovie_id();
+        float average = Float.parseFloat(movie.getVote_average()) / 2.0f;
 
         // set all properties of MovieDetails
         binding.title.setText(movie.getTitle());
-        binding.synopsis.setText(movie.getOverview());
+        binding.release.setText(movie.getRelease_date());
+        binding.originalTitle.setText(movie.getOriginalTitle());
         binding.ratingBar.setRating(average);
-        binding.rating.setText(String.valueOf(movie.getVote_average()));
-        binding.release.setText(String.format("Release date: %s", movie.getRelease_date()));
+        binding.rating.setText(movie.getVote_average());
+        binding.voteCount.setText(movie.getVoteCount());
+        binding.synopsis.setText(movie.getOverview());
+
         Glide.with(this).load(movie.getPoster_path()).into(binding.poster);
 
         // load the youtube video to view
@@ -57,7 +59,7 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
 
     // Function to play the video from Youtube when user click on it
     private void playTrailerVideo(String youtube_key) {
-        YouTubePlayerView player = findViewById(R.id.player);
+        YouTubePlayerView player = findViewById(R.id.trailer_player);
         player.initialize(youtube_key, new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider,
