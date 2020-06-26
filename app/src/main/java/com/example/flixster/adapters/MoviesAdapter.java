@@ -3,8 +3,7 @@ package com.example.flixster.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.Parcel;
-import android.os.Parcelable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +14,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.codepath.asynchttpclient.AsyncHttpClient;
+import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.example.flixster.MovieDetailsActivity;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.parceler.Parcels;
 
 import java.util.List;
 
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+import okhttp3.Headers;
 
 // Create the basic adapter extending from RecyclerView.Adapter
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder> {
@@ -103,7 +108,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             itemView.setOnClickListener(this);
         }
 
-
         @Override
         public void onClick(View v) {
             // get position of item that was clicked
@@ -113,14 +117,48 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             if (position != RecyclerView.NO_POSITION) {
                 // get object in movie list that will be pass into new activity
                 Movie movie = movies_list.get(position);
-                // create new intent to new activity
-                Intent intent = new Intent(context, MovieDetailsActivity.class);
-                // pass movie object as data to new activity
-                intent.putExtra("movie", Parcels.wrap(movie));
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                // start activity
-                context.startActivity(intent);
+                getTrailerId(movie);
             }
+        }
+
+        // when user click on backdrop poster, start playing the movie trailer
+        private void getTrailerId(final Movie movie) {
+            // create the url with movie id and api key
+            int id = movie.getMovie_id();
+            String api_key = context.getString(R.string.movie_api_key);
+            String url = "https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=" + api_key;
+
+            AsyncHttpClient client = new AsyncHttpClient();
+            client.get(url, new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(int statusCode, Headers headers, JSON data) {
+                    JSONObject json = data.jsonObject;
+                    try {
+                        // get the results array from retrieved json data
+                        JSONArray results = json.getJSONArray("results");
+                        // get the first video id in the list of possible trailers
+                        String id = results.getJSONObject(0).getString("key");
+                        // start a new intent
+                        Intent intent = new Intent(context, MovieDetailsActivity.class);
+                        // pass video id to next activity to play the correct trailer
+                        intent.putExtra("video_id", id);
+                        // pass movie object as data to new activity
+                        intent.putExtra("movie", Parcels.wrap(movie));
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        // start activity
+                        context.startActivity(intent);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void onFailure(int statusCode, Headers headers, String response,
+                                      Throwable throwable) {
+                    Log.e("MovieDetailsActivity", "Error retrieving JSON from endpoint");
+                }
+            });
         }
     }
 }

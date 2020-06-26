@@ -23,7 +23,7 @@ import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=cb46ec90fde8f6fb9edc536bcfbbf6f5";
+    public static String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=";
     public static final String TAG = "MainActivity";
 
     List<Movie> movie_list;
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String movie_key = getString(R.string.movie_api_key);
 
         // initialize an empty movie list
         movie_list = new ArrayList<>();
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Create client so we can retrieve JSON object and parse into a list of movies
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(NOW_PLAYING_URL, new JsonHttpResponseHandler() {
+        client.get(NOW_PLAYING_URL + movie_key, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON object) {
                 JSONObject json = object.jsonObject;
@@ -64,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
+            public void onFailure(int statusCode, Headers headers, String response,
+                                  Throwable throwable) {
                 Log.d(TAG, "Failed to fetch MoviesAPI");
             }
         });

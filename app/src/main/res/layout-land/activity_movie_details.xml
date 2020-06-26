@@ -7,24 +7,27 @@
     android:background="#484D50"
     tools:context=".MovieDetailsActivity">
 
+
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:background="#00000000"
         android:shadowColor="#00FFFFFF"
         android:text="Movie title"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/trailer_player"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
         android:id="@+id/rb_vote_avg"
-        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -33,20 +36,38 @@
         app:layout_constraintStart_toEndOf="@+id/trailer_player"
         app:layout_constraintTop_toBottomOf="@+id/release" />
 
-    <TextView
-        android:id="@+id/synopsis"
+
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:shadowColor="#FFFFFF"
-        android:text="Synopsis"
-        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/trailer_player"
-        app:layout_constraintTop_toBottomOf="@+id/overview_label" />
+        app:layout_constraintTop_toBottomOf="@+id/overview_label"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/synopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="#FFFFFF"
+                android:text="Synopsis"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/release"
@@ -67,32 +88,22 @@
         android:layout_marginTop="8dp"
         android:text="Description"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/trailer_player"
         app:layout_constraintTop_toBottomOf="@+id/rb_vote_avg" />
 
-    <ImageView
+
+    <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/trailer_player"
         android:layout_width="400dp"
         android:layout_height="225dp"
         android:layout_marginStart="16dp"
         android:adjustViewBounds="true"
-        android:onClick="onShowTrailer"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/flicks_backdrop_placeholder" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/trailer_player"
-        app:layout_constraintEnd_toEndOf="@+id/trailer_player"
-        app:layout_constraintStart_toStartOf="@+id/trailer_player"
-        app:layout_constraintTop_toTopOf="@+id/trailer_player"
-        app:srcCompat="@drawable/youtube_social_icon_white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

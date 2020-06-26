@@ -12,7 +12,6 @@ import java.util.List;
 
 @Parcel // so we can later pass the entire Movie object to another activity
 public class Movie {
-    // TODO: Fetch image size from Config endpoint instead of hardcoding
     public static final String BASE_IMG_URL = "https://image.tmdb.org/t/p/w342/";
 
     String poster_path;
