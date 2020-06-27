@@ -24,8 +24,9 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-* [x] Include other details of movie including poster, vote count, release date, original title, and popularity.
+* [x] Include other details of movie including poster, vote count, release date, original title, and popularity. Implemented for both portrait and landscape mode.
 * [x] Include video trailer in the same activity as movie details for better user experience
+* [x] Shorten the movie overview in MainActivity and show full description when user clicks on a movie to see details.
 
 ## Video Walkthrough
 
