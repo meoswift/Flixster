@@ -60,7 +60,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
         // set all properties of a movie item
         holder.title.setText(movie.getTitle());
-        holder.overview.setText(movie.getOverview());
+        holder.overview.setText(movie.getShortenedOverview());
         setPoster(movie, holder);
     }
 
@@ -134,12 +134,16 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
                 public void onSuccess(int statusCode, Headers headers, JSON data) {
                     JSONObject json = data.jsonObject;
                     try {
-                        // get the results array from retrieved json data
-                        JSONArray results = json.getJSONArray("results");
-                        // get the first video id in the list of possible trailers
-                        String id = results.getJSONObject(0).getString("key");
                         // start a new intent
                         Intent intent = new Intent(context, MovieDetailsActivity.class);
+                        
+                        // get the results array from retrieved json data
+                        JSONArray results = json.getJSONArray("results");
+                        String id = null;
+                        if (results.length() != 0)
+                            // get the first video id in the list of possible trailers
+                            id = results.getJSONObject(0).getString("key");
+
                         // pass video id to next activity to play the correct trailer
                         intent.putExtra("videoId", id);
                         // pass movie object as data to new activity
@@ -156,7 +160,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
                 @Override
                 public void onFailure(int statusCode, Headers headers, String response,
                                       Throwable throwable) {
-                    Log.e("MovieDetailsActivity", "Error retrieving JSON from endpoint");
                 }
             });
         }

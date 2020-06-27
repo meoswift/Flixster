@@ -132,4 +132,5 @@
         app:layout_constraintStart_toEndOf="@+id/poster"
         app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>

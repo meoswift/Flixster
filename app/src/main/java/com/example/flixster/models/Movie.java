@@ -91,4 +91,12 @@ public class Movie {
     public int getMovie_id() {
         return movieId;
     }
+
+    public String getShortenedOverview() {
+        if (overview.length() > 150) {
+            return overview.substring(0, 150) + "...";
+        } else {
+            return overview;
+        }
+    }
 }

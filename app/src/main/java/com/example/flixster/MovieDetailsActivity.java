@@ -17,6 +17,7 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 import org.parceler.Parcels;
+import org.w3c.dom.Text;
 
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
@@ -62,13 +63,15 @@ public class MovieDetailsActivity extends YouTubeBaseActivity {
     }
 
     // Function to play the video from Youtube when user click on it
-    private void playTrailerVideo(String youtube_key) {
-        YouTubePlayerView player = findViewById(R.id.trailer_player);
+    private void playTrailerVideo(final String youtube_key) {
+        final YouTubePlayerView player = findViewById(R.id.trailer_player);
+
         player.initialize(youtube_key, new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                 YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.cueVideo(videoId);
+                if (videoId != null)
+                    youTubePlayer.cueVideo(videoId);  // make sure id is valid before playing
             }
 
             @Override

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#252728"
+    android:padding="4dp"
     tools:ignore="ExtraText">
 
     <LinearLayout
@@ -18,8 +19,8 @@
 
         <ImageView
             android:id="@+id/poster"
-            android:layout_width="150dp"
-            android:layout_height="225dp"
+            android:layout_width="154dp"
+            android:layout_height="231dp"
             tools:srcCompat="@tools:sample/avatars" />
 
     </LinearLayout>
@@ -29,9 +30,9 @@
         android:id="@+id/info_holder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
+        android:paddingRight="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_holder"
@@ -43,14 +44,14 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0" />
 
         <TextView
             android:id="@+id/overview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="175dp"
             android:gravity="center_vertical"
             android:textColor="#B0FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"

@@ -8,8 +8,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="secret" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MovieTrailerActivity" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -22,11 +22,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_movie_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_movie_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/adapters/MoviesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/adapters/MoviesAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/models/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/movie_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/movie_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_trailer.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/movie_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/movie_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +82,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="RF8N316WPGN" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-26T22:24:56.785Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-26T23:25:38.444Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs" />
@@ -208,22 +215,22 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="574" y="294" key="Downloadable.Font.Dialog.Size/0.23.1792.1017@0.23.1792.1017" timestamp="1593195920795" />
-    <state width="1750" height="275" key="GridCell.Tab.0.bottom" timestamp="1593205007557">
+    <state width="1750" height="275" key="GridCell.Tab.0.bottom" timestamp="1593225272351">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007557" />
-    <state width="1750" height="275" key="GridCell.Tab.0.center" timestamp="1593205007556">
+    <state width="1750" height="275" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593225272351" />
+    <state width="1750" height="275" key="GridCell.Tab.0.center" timestamp="1593225272351">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007556" />
-    <state width="1750" height="275" key="GridCell.Tab.0.left" timestamp="1593205007555">
+    <state width="1750" height="275" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593225272351" />
+    <state width="1750" height="275" key="GridCell.Tab.0.left" timestamp="1593225272350">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007555" />
-    <state width="1750" height="275" key="GridCell.Tab.0.right" timestamp="1593205007556">
+    <state width="1750" height="275" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593225272350" />
+    <state width="1750" height="275" key="GridCell.Tab.0.right" timestamp="1593225272351">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="275" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593205007556" />
+    <state width="1750" height="275" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593225272351" />
     <state x="397" y="170" key="SettingsEditor" timestamp="1593022818672">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
@@ -232,14 +239,14 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="100" y="123" width="1592" height="817" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593117626712" />
-    <state x="566" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1593185189794">
+    <state x="566" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1593222411037">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state x="566" y="364" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593185189794" />
-    <state x="676" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593209372649">
+    <state x="566" y="364" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1593222411037" />
+    <state x="676" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593211707713">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state x="676" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1017@0.23.1792.1017" timestamp="1593209372649" />
+    <state x="676" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1017@0.23.1792.1017" timestamp="1593211707713" />
     <state x="561" y="248" width="670" height="676" key="search.everywhere.popup" timestamp="1593186633264">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
