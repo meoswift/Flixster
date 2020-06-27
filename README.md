@@ -34,7 +34,7 @@ Here's a walkthrough of implemented user stories:
 
 (Portrait vs. Landscape)
 
-<img src='https://i.imgur.com/w9btWPA.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />  <img src='https://i.imgur.com/UbbgLWO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> 
+<img src='https://i.imgur.com/1oqgI3Z.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />  <img src='https://i.imgur.com/UbbgLWO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> 
 
 GIF created with [Kap](https://getkap.co/).
 
