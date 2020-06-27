@@ -40,7 +40,10 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- Had some issues converting the IU from portrait mode to Landscape mode for the activity that shows movie details. I had to look into ScrollView and LinearLayout in order to align my UI components. However, the documentations were clear and it was easy to implement.
+- The Youtube video was supposed to play in a separate activity. However, I thought this wouldn't make a good UI so I wanted to include the YoutubeView in the activity that show movie details. I didn't know how to actually do this at first. However, with the help of CodePath instructors, I was able to get it going! :-)
+- I was able to understand RecyclerView really well from this assignment. 
+- I also found out that reading the CodePath instructions on how to implement things are really helpful. I'm not able to follow along with the video tutorial sometimes but the documentation was great.
 
 ## Open-source libraries used
 
