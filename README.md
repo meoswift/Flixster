@@ -1,8 +1,6 @@
-# Project 2 - *Flixster*
+# *Flixster*
 
 **Flixster** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
-
-Time spent: **15** hours spent in total
 
 ## User Stories
 
@@ -42,27 +40,5 @@ GIF created with [Kap](https://getkap.co/).
 ## Notes
 
 - Had some issues converting the UI from portrait mode to Landscape mode for the activity that shows movie details. I had to look into ScrollView and LinearLayout in order to align my UI components. However, the documentations were clear and it was easy to implement.
-- The Youtube video was supposed to play in a separate activity. However, I thought this wouldn't make a good UI so I wanted to include the YoutubeView in the activity that show movie details. I didn't actually know how to do this at first. However, with the help of CodePath instructors, I was able to get it going! :-)
-- I was able to understand RecyclerView really well from this assignment. 
-- I also found out that reading the CodePath instructions on how to implement things are really helpful. I'm not able to follow along with the video tutorial sometimes but the documentation was great.
+- The Youtube video was supposed to play in a separate activity. However, I thought this wouldn't make a good UI so I wanted to include the YoutubeView in the activity that show movie details. 
 
-## Open-source libraries used
-
-- [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
-
-## License
-
-    Copyright 2020 CodePath FBU
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
